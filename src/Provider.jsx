@@ -6,12 +6,12 @@ const AppContext = createContext()
 
 const AppProvider = ({ children }) => {
 
-    const [tarea, setTarea] = useState("")
+    const [tarea, setTarea] = useState('')
 
     return (
         <AppContext.Provider
             value={{
-                tarea,
+                newTask,
                 setTarea
             }}>
 

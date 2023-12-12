@@ -1,10 +1,15 @@
-const TaskList = () => {
 
-    return (
+import React from 'react';
+import TaskItem from './TaskItem';
 
-        <section>TaskList</section>
+const TaskList = ({ tasks, handleComplete, handleDelete }) => {
+  return (
+    <ul>
+      {tasks.map(task => (
+        <TaskItem key={task.id} task={task} handleComplete={handleComplete} handleDelete={handleDelete} />
+      ))}
+    </ul>
+  );
+};
 
-    )
-}
-
-export default TaskList
+export default TaskList;
